@@ -487,6 +487,29 @@ body {
   padding-left: 28px;
 }
 
+.ai-pullquote {
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+
+.ai-pullquote p {
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.ai-pullquote cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-style: normal;
+  color: var(--text-subtle);
+}
+
 .ai-intro {
   color: var(--text-muted);
   font-size: 18px;
@@ -638,6 +661,10 @@ body {
   .ai-quote {
     font-size: 28px;
     padding-left: 20px;
+  }
+
+  .ai-pullquote p {
+    font-size: 17px;
   }
 
   .ai-intro {
