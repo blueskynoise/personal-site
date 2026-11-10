@@ -6,7 +6,7 @@ Portfolio site for Mark Graziano's development work.
 
 Push to `main` and GitHub Pages will auto-deploy.
 
-**Live:** https://graz-claw.github.io/markgraziano.com/
+**Live:** https://blueskynoise.github.io/personal-site/
 
 ### Custom Domain
 
@@ -17,7 +17,7 @@ To use `markgraziano.com`:
 
    | Type    | Name  | Value                    |
    | ------- | ----- | -------- |
-   | CNAME   | `www` | `graz-claw.github.io` |
+   | CNAME   | `www` | `blueskynoise.github.io` |
    | A       | `@`   | `185.199.108.153` |
    | A       | `@`   | `185.199.109.153` |
    | A       | `@`   | `185.199.110.153` |
