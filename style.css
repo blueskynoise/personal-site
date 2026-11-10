@@ -487,12 +487,12 @@ body {
   padding-left: 28px;
 }
 
-.ai-pullquote {
+.pullquote {
   max-width: 640px;
-  margin: 0 0 32px;
+  margin: 20px 0 0;
 }
 
-.ai-pullquote p {
+.pullquote p {
   color: var(--text);
   font-size: 19px;
   font-weight: 500;
@@ -501,7 +501,7 @@ body {
   line-height: 1.5;
 }
 
-.ai-pullquote cite {
+.pullquote cite {
   display: block;
   margin-top: 8px;
   font-family: var(--font-mono);
@@ -663,7 +663,7 @@ body {
     padding-left: 20px;
   }
 
-  .ai-pullquote p {
+  .pullquote p {
     font-size: 17px;
   }
 
