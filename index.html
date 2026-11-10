@@ -4,54 +4,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mark Graziano — Experience solves problems</title>
-  <meta name="description" content="Product-minded engineer focused on identifying friction across users, developers, operators, and business stakeholders, then designing systems that feel intuitive, useful, and enjoyable.">
+  <meta name="description" content="Product-minded engineer focused on finding friction across users, developers, operators, and business stakeholders, then designing systems that feel intuitive, useful, and enjoyable.">
+  <link rel="canonical" href="https://markgraziano.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markgraziano.com/">
+  <meta property="og:site_name" content="Mark Graziano">
+  <meta property="og:title" content="Mark Graziano — Experience solves problems">
+  <meta property="og:description" content="Product-minded engineer. Features solve requirements. Experience solves problems.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mark Graziano — Experience solves problems">
+  <meta name="twitter:description" content="Product-minded engineer. Features solve requirements. Experience solves problems.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="#top" class="nav-name">Mark Graziano</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#how-i-build">How I Build</a>
+        <a href="#principles">Principles</a>
+        <a href="#ai">On AI</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" id="top">
     <header class="hero">
-      <p class="hero-label">Mark Graziano · Product-Minded Engineer</p>
+      <p class="hero-label">Product-Minded Engineer</p>
       <h1 class="hero-title">Features solve requirements. Experience solves problems.</h1>
       <div class="hero-subtitle">
         <p>Anyone can implement a checklist.</p>
-        <p>Great products come from understanding where people struggle, what slows them down, and what unnecessary complexity they're carrying.</p>
-        <p>I build systems that don't just function—they feel intuitive, useful, and enjoyable to use.</p>
+        <p>Great products come from understanding where people struggle, what slows them down, and what they put up with because nobody fixed it.</p>
+        <p>I build systems that don't just function. They feel intuitive, useful, and enjoyable to use.</p>
       </div>
       <div class="hero-cta-group">
-        <a href="#how-i-build" class="btn btn-primary">How I Build</a>
-        <a href="#work" class="btn btn-secondary">See Examples</a>
+        <a href="#work" class="btn btn-primary">See the Work</a>
+        <a href="#how-i-build" class="btn btn-secondary">How I Build</a>
       </div>
     </header>
+
+    <!-- ── Work ──────────────────────────────────── -->
+    <section id="work" class="work-section">
+      <div class="section-header">
+        <span class="section-label">Work</span>
+        <h2 class="section-title">What this looks like</h2>
+        <p class="section-intro">Different audiences, different domains, the same focus: make useful systems easier to understand and act on.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- Bivvi -->
+        <article class="project-card" style="--accent-color: #d97706;">
+          <div class="project-logo">
+            <img src="assets/bivvi-logo.png" alt="Bivvi logo" loading="lazy">
+          </div>
+          <div class="project-meta">
+            <span class="project-tag">Family Connection</span>
+            <h3 class="project-title"><a href="https://bivvi.app" target="_blank" rel="noopener">Bivvi</a></h3>
+            <p class="project-desc">A shared reading app for grandparents and grandchildren who live far apart. A video call gives them a screen. Bivvi gives them something to do together.</p>
+            <div class="design-note">
+              <p class="design-note-label">Design Note</p>
+              <h4 class="design-note-title">Design around a shared moment, not a video call.</h4>
+              <p>Video calling already exists. The challenge was keeping a grandparent and a four-year-old engaged with each other across distance, and a conversation rarely does that. A book does.</p>
+              <p>So the product protects the reading. Parents manage the account and content. Grandparents join through an email magic link, and in many sessions the only thing they touch is the arrow that turns the page.</p>
+              <p>That came from my own family. Every minute spent on a blurred camera filter or a FaceTime hiccup was a minute the kids drifted away. The goal wasn't a better video call. It was making grandparents feel like they were sitting next to their grandchildren with a book.</p>
+            </div>
+            <a href="https://bivvi.app" class="project-link" target="_blank" rel="noopener">Visit bivvi.app <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- TxR Studio -->
+        <article class="project-card" style="--accent-color: #6366f1;">
+          <div class="project-logo">
+            <img src="assets/txr-logo.png" alt="TxR Studio logo" loading="lazy">
+          </div>
+          <div class="project-meta">
+            <span class="project-tag">Radio Programming</span>
+            <h3 class="project-title"><a href="https://txrstudio.com" target="_blank" rel="noopener">TxR Studio</a></h3>
+            <p class="project-desc">A web-first radio programming tool that turns telecom configuration into guided, plain-language setup for people who program a radio a few times a year.</p>
+            <div class="design-note">
+              <p class="design-note-label">Design Note</p>
+              <h4 class="design-note-title">Make radio programming feel approachable, not technical.</h4>
+              <p>Most radio software assumes you want to understand tones, offsets, duplex settings, and memory layouts. Most people don't. They program a radio occasionally, forget the vocabulary in between, and relearn it every time for no good reason.</p>
+              <p>TxR starts from where you want to communicate, not how the radio stores configuration. Guided flows, RepeaterBook integration, and sensible defaults take most of the decisions off the table. Running in the browser means there is nothing to install or update for a task you do twice a year.</p>
+              <p>Radio software also doesn't have to look like a spreadsheet. Powerful and pleasant are not opposites.</p>
+            </div>
+            <a href="https://txrstudio.com" class="project-link" target="_blank" rel="noopener">Visit txrstudio.com <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Summa -->
+        <article class="project-card" style="--accent-color: #0d9488;">
+          <div class="project-logo">
+            <img src="assets/summa-logo.png" alt="Summa logo" loading="lazy">
+          </div>
+          <div class="project-meta">
+            <span class="project-tag">Sales Enablement</span>
+            <h3 class="project-title"><a href="https://summahq.com" target="_blank" rel="noopener">Summa</a></h3>
+            <p class="project-desc">Meeting intelligence for sales teams. One call becomes the follow-up email, the CRM update, and the task list, without retyping any of it.</p>
+            <div class="design-note">
+              <p class="design-note-label">Design Note</p>
+              <h4 class="design-note-title">One conversation. Multiple outcomes.</h4>
+              <p>Every sales call produces the same follow-up work: the client email, the collateral, the CRM update, the action items, the summary for leadership. None of it is hard. The pain is entering the same information into five systems.</p>
+              <p>The conversation already contains everything those tasks need. Summa captures it once and lets the rep decide where it goes. Review the draft email and click Send. Review the CRM changes and click Update. Push tasks to Google Tasks with a click.</p>
+              <p>One call. One transcription. One click for everything else.</p>
+            </div>
+            <a href="https://summahq.com" class="project-link" target="_blank" rel="noopener">Visit summahq.com <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- The GRC Podcast -->
+        <article class="project-card" style="--accent-color: #1db954;">
+          <div class="project-logo">
+            <img src="assets/grc-podcast-logo.png" alt="The GRC Podcast logo" loading="lazy">
+          </div>
+          <div class="project-meta">
+            <span class="project-tag">Industry Podcast</span>
+            <h3 class="project-title"><a href="https://open.spotify.com/show/4vD7XV8vP323P7raPjtAq0" target="_blank" rel="noopener">The GRC Podcast</a></h3>
+            <p class="project-desc">Conversations with security champions about governance, risk, and compliance as it actually gets done, not as it looks on paper.</p>
+            <div class="design-note">
+              <p class="design-note-label">Design Note</p>
+              <h4 class="design-note-title">Design security around enablement, not gatekeeping.</h4>
+              <p>Too much of the industry treats GRC as the function that slows the business down. Controls become checklists, engineers get requirements without context, and security becomes the team that says no.</p>
+              <p>A good practitioner understands the intent behind a control, works with engineers on a practical implementation, and makes the secure path the easiest path. The best controls are the ones people barely notice.</p>
+              <p>The podcast held itself to the same standard. Every episode dug into a real process: what was manual, what hurt, what got automated first, and what a listener could do tomorrow.</p>
+            </div>
+            <a href="https://open.spotify.com/show/4vD7XV8vP323P7raPjtAq0" class="project-link" target="_blank" rel="noopener">Listen on Spotify <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
 
     <!-- ── How I Build ───────────────────────────── -->
     <section id="how-i-build" class="pillars-section">
       <div class="section-header">
         <span class="section-label">How I Build</span>
         <h2 class="section-title">Three lenses</h2>
+        <p class="section-intro">A working feature is only the baseline. I look at the experience around it: who has to learn it, maintain it, operate it, and justify it.</p>
       </div>
-
-      <p class="pillars-intro">A working feature is only the baseline. I look at the experience around it: who has to learn it, maintain it, operate it, and justify it.</p>
 
       <div class="pillars-grid">
         <div class="pillar-card">
-          <div class="pillar-icon" aria-hidden="true">◎</div>
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
           <h3 class="pillar-title">People Using It</h3>
-          <p class="pillar-desc">Can someone reach the outcome without confusion, extra steps, or unnecessary decisions?</p>
+          <p class="pillar-desc">Can someone reach the outcome without confusion, extra steps, or decisions they shouldn't have to make?</p>
         </div>
 
         <div class="pillar-card">
-          <div class="pillar-icon" aria-hidden="true">⟨/⟩</div>
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg>
+          </div>
           <h3 class="pillar-title">People Building It</h3>
           <p class="pillar-desc">Can developers understand, change, and extend the system without inheriting avoidable complexity?</p>
         </div>
 
         <div class="pillar-card">
-          <div class="pillar-icon" aria-hidden="true">⚙</div>
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+          </div>
           <h3 class="pillar-title">People Running It</h3>
-          <p class="pillar-desc">Can operators and business stakeholders support the product without creating new drag elsewhere?</p>
+          <p class="pillar-desc">Can operators and business stakeholders support the product without it creating new drag elsewhere?</p>
         </div>
       </div>
 
@@ -59,13 +181,12 @@
     </section>
 
     <!-- ── Principles ────────────────────────────── -->
-    <section id="beliefs" class="principles-section">
+    <section id="principles" class="principles-section">
       <div class="section-header">
-        <span class="section-label">Operating Beliefs</span>
-        <h2 class="section-title">Principles</h2>
+        <span class="section-label">Principles</span>
+        <h2 class="section-title">Beliefs I build with</h2>
+        <p class="section-intro">The lenses are how I evaluate a system. These are what I hold myself to while building one.</p>
       </div>
-
-      <p class="principles-intro">If the lenses are how I evaluate systems, these are the beliefs I build with.</p>
 
       <ol class="principles-list">
         <li class="principle-item">
@@ -79,61 +200,37 @@
           <span class="principle-number">02</span>
           <div class="principle-copy">
             <h3>The best feature is the one users never need to think about.</h3>
-            <p>Remove unnecessary steps, decisions, and explanations whenever possible.</p>
+            <p>Remove steps, decisions, and explanations wherever you can.</p>
           </div>
         </li>
         <li class="principle-item">
           <span class="principle-number">03</span>
           <div class="principle-copy">
-            <h3>A process should become easier every time it is repeated.</h3>
-            <p>Repeated work should reveal opportunities for automation, defaults, and better workflows.</p>
+            <h3>A process should get easier every time it is repeated.</h3>
+            <p>Repetition is where automation, defaults, and better workflows reveal themselves.</p>
           </div>
         </li>
         <li class="principle-item">
           <span class="principle-number">04</span>
-          <div class="principle-copy">
-            <h3>Technology should reduce burden, not create it.</h3>
-            <p>Software should make users, developers, and operators carry less complexity, not more.</p>
-          </div>
-        </li>
-        <li class="principle-item">
-          <span class="principle-number">05</span>
           <div class="principle-copy">
             <h3>Simple and powerful are not opposites.</h3>
             <p>The best systems hide complexity until it is actually needed.</p>
           </div>
         </li>
         <li class="principle-item">
-          <span class="principle-number">06</span>
+          <span class="principle-number">05</span>
           <div class="principle-copy">
             <h3>Done matters. Delight lasts.</h3>
-            <p>Shipping is important, but memorable products are the ones people enjoy using.</p>
+            <p>Shipping is important, but the products people remember are the ones they enjoy using.</p>
           </div>
         </li>
       </ol>
     </section>
 
-    <!-- ── Philosophy ────────────────────────────── -->
-    <section id="philosophy" class="philosophy-section">
-      <div class="philosophy-container">
-        <span class="section-label">Philosophy</span>
-        <h2 class="philosophy-heading">My work starts where the checklist ends.</h2>
-        <p class="philosophy-body">I pay attention to the moments where products become harder than they need to be: the unclear decision, the repeated task, the hidden maintenance burden, the handoff that creates business drag.</p>
-        <ul class="philosophy-questions">
-          <li>What feels confusing?</li>
-          <li>What can be automated?</li>
-          <li>What can the system decide intelligently?</li>
-          <li>What unnecessary complexity are we asking people to carry?</li>
-        </ul>
-        <p class="philosophy-body">That is where experience solves the real problem: by making the right path easier for users, builders, operators, and the business behind the product.</p>
-      </div>
-    </section>
-
-    <!-- ── AI Philosophy ─────────────────────────── -->
-    <section id="ai-philosophy" class="ai-section">
-      <div class="ai-container">
-        <span class="section-label">AI Philosophy</span>
-        <blockquote class="ai-quote">"The hard part is no longer building software. The hard part is building software people love using."</blockquote>
+    <!-- ── On AI ─────────────────────────────────── -->
+    <section id="ai" class="ai-section">
+      <span class="section-label">On AI</span>
+        <p class="ai-quote">The hard part is no longer building software. The hard part is building software people love using.</p>
 
         <p class="ai-intro">I am not interested in proving I can build software without AI any more than I am interested in proving I can navigate the internet without a search engine.</p>
 
@@ -144,160 +241,16 @@
         </div>
 
         <div class="ai-body">
-          <p>The value of an engineer is not memorizing syntax, APIs, libraries, or framework details. The value comes from understanding problems, workflows, incentives, constraints, and user experience.</p>
-          <p>AI dramatically reduces the cost of implementation. I regularly use tools like Codex and Claude to refine requirements, explore architectures, implement functionality, review code, and accelerate iteration.</p>
-          <p>Successful products do not emerge from a single prompt. They emerge from repeated cycles of observation, product thinking, implementation, testing, and refinement.</p>
-          <p>Many of my projects began by identifying burdens that people had simply accepted as normal. AI can generate software quickly, but it cannot experience confusing workflows, unnecessary clicks, operational burden, poor communication, or frustrating user experiences.</p>
-          <p>AI is most effective when paired with structure, deterministic logic, thoughtful data preparation, and iterative refinement. As software becomes easier to create, the differentiator shifts from implementation to judgment.</p>
+          <p>An engineer's value was never memorizing syntax and framework details. It comes from understanding problems, workflows, incentives, and constraints. I use AI coding tools every day to refine requirements, explore architectures, implement, review, and iterate faster. The products still come from repeated cycles of observation, judgment, and refinement, not a single prompt.</p>
+          <p>Most of my projects started with something people had accepted as normal. AI can generate software quickly, but it cannot sit through a confusing workflow or feel an unnecessary click. As software gets cheaper to make, the differentiator moves from implementation to judgment.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- ── Work as Evidence ─────────────────────── -->
-    <section id="work" class="work-section">
-      <div class="section-header">
-        <span class="section-label">Evidence</span>
-        <h2 class="section-title">What this looks like</h2>
-      </div>
-
-      <p class="work-intro">These projects are the evidence: different audiences, different domains, the same focus on making useful systems feel easier to understand and act on.</p>
-
-      <div class="project-grid">
-
-        <!-- Bivvi -->
-        <a href="https://bivvi.app" class="project-card" style="--accent-color: #d97706;" target="_blank" rel="noopener">
-          <div class="project-logo">
-            <img src="assets/bivvi-logo.png" alt="Bivvi logo" loading="lazy">
-          </div>
-          <div class="project-meta">
-            <span class="project-tag">Family Connection</span>
-            <h3 class="project-title">Bivvi</h3>
-            <p class="project-desc">A shared reading app for grandparents and grandchildren who live far apart.</p>
-            <p class="project-why">It serves families who want more meaningful remote time than a generic video call can usually provide.</p>
-            <p class="project-why">Bivvi solves the problem of unstructured distance by giving both sides a simple activity to share together.</p>
-            <div class="design-note">
-              <p class="design-note-label">Design Note</p>
-              <h4 class="design-note-title">Design around a shared moment, not a video call.</h4>
-              <p>The problem was never communication. Video calling already exists.</p>
-              <p>The challenge was helping grandparents and young children stay engaged together across distance.</p>
-              <p>Reading gives both sides a shared activity, keeps children present, and creates more meaningful interaction than trying to sustain a conversation with a three- or five-year-old over a video call.</p>
-              <p>Every product decision was made to protect that experience.</p>
-              <p>Parents can manage the account and content, while grandparents join through simple email magic links. During the call, participants shouldn't have to think about the technology at all. A parent familiar with the platform can handle setup, while grandparents can simply show up knowing the experience will work. In many cases, the only interaction required is clicking an arrow to turn the page.</p>
-              <p>That simplicity came from a personal frustration. When my family tried reading together remotely, small technical issues constantly interrupted the experience. A blurred camera filter, the wrong camera selected, FaceTime refusing to connect, or a book that wasn't visible would quickly turn into troubleshooting sessions. Every minute spent fixing technology was a minute children became distracted, lost interest, and disconnected from the experience.</p>
-              <p>The goal wasn't just to make the software easier to use. It was to remove technology as a source of stress for both grandparents and parents so everyone could focus on spending time together.</p>
-              <p><strong>The goal wasn't to build a better video call. The goal was to make grandparents feel like they were sitting next to their grandchildren while reading a book.</strong></p>
-            </div>
-            <span class="project-link">Visit bivvi.app <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-
-        <!-- TxR Studio -->
-        <a href="https://txrstudio.com" class="project-card" style="--accent-color: #6366f1;" target="_blank" rel="noopener">
-          <div class="project-logo">
-            <img src="assets/txr-logo.png" alt="TxR Studio logo" loading="lazy">
-          </div>
-          <div class="project-meta">
-            <span class="project-tag">Radio Programming</span>
-            <h3 class="project-title">TxR Studio</h3>
-            <p class="project-desc">A modern, web-first radio programming tool that turns telecom configuration into plain-language guided setup.</p>
-            <p class="project-why">It serves radio users who need to program devices occasionally without becoming configuration experts.</p>
-            <p class="project-why">TxR Studio solves the problem of intimidating setup by making radio programming feel guided, clear, and approachable.</p>
-            <div class="design-note">
-              <p class="design-note-label">Design Note</p>
-              <h4 class="design-note-title">Make radio programming feel approachable, not technical.</h4>
-              <p>Most radio software assumes users want to understand tones, offsets, duplex settings, memory layouts, and radio terminology.</p>
-              <p>The reality is that many people program a radio a few times per year and forget most of those concepts in between.</p>
-              <p>Every time they return, they're forced to relearn information that isn't actually important to their goal.</p>
-              <p>TxR was built around the idea that users should think about where they want to communicate, not how radios store configuration.</p>
-              <p>Guided setup flows, RepeaterBook integration, and sensible defaults remove unnecessary decisions and reduce the amount of radio-specific knowledge users need to carry.</p>
-              <p>The browser-first architecture follows the same philosophy. Programming a radio shouldn't require installing, updating, and maintaining another application for a task you may only perform occasionally.</p>
-              <p>Just as importantly, radio software doesn't have to feel like a spreadsheet. Powerful tools can still be intuitive, visually appealing, and enjoyable to use.</p>
-              <p>The goal wasn't to expose every radio setting. The goal was to help people confidently program a radio without feeling like they needed to become radio experts first.</p>
-            </div>
-            <span class="project-link">Visit txrstudio.com <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-
-        <!-- Summa -->
-        <a href="https://summahq.com" class="project-card" style="--accent-color: #0d9488;" target="_blank" rel="noopener">
-          <div class="project-logo">
-            <img src="assets/summa-logo.png" alt="Summa logo" loading="lazy">
-          </div>
-          <div class="project-meta">
-            <span class="project-tag">Sales Enablement</span>
-            <h3 class="project-title">Summa</h3>
-            <p class="project-desc">A meeting intelligence product for sales teams managing follow-ups, CRM notes, and customer commitments.</p>
-            <p class="project-why">It serves teams whose conversations create valuable context that is easy to lose after the call ends.</p>
-            <p class="project-why">Summa solves the problem of scattered meeting information by turning conversations into organized next steps.</p>
-            <div class="design-note">
-              <p class="design-note-label">Design Note</p>
-              <h4 class="design-note-title">One conversation. Multiple outcomes.</h4>
-              <p>Every sales call creates a predictable set of follow-up work:</p>
-              <ul>
-                <li>Send the client follow-up</li>
-                <li>Share relevant collateral</li>
-                <li>Update the CRM</li>
-                <li>Create action items</li>
-                <li>Capture commitments and next steps</li>
-                <li>Provide visibility to leadership</li>
-              </ul>
-              <p>The challenge isn't that this work is difficult. It's that salespeople end up repeating the same information across multiple systems.</p>
-              <p>The conversation already contains everything needed to complete those tasks.</p>
-              <p>Summa was designed around a simple idea: capture the information once, then let users decide where it should go.</p>
-              <p>Need a follow-up email? Review the draft and click Send.</p>
-              <p>Need CRM updates? Review and click Update.</p>
-              <p>Need personal tasks? Push them to Google Tasks with a click.</p>
-              <p>Instead of asking users to recreate the same information over and over, Summa turns a single conversation into the outputs they already need.</p>
-              <p>One call. One transcription. One click for everything else.</p>
-            </div>
-            <span class="project-link">Visit summahq.com <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-
-        <!-- The GRC Podcast -->
-        <a href="https://open.spotify.com/show/4vD7XV8vP323P7raPjtAq0" class="project-card" style="--accent-color: #1db954;" target="_blank" rel="noopener">
-          <div class="project-logo">
-            <img src="assets/grc-podcast-logo.png" alt="The GRC Podcast logo" loading="lazy">
-          </div>
-          <div class="project-meta">
-            <span class="project-tag">Industry Podcast</span>
-            <h3 class="project-title">The GRC Podcast</h3>
-            <p class="project-desc">Practical conversations with security champions about governance, risk, and compliance — how it actually gets done, not just how it looks on paper.</p>
-            <p class="project-why">It serves security, risk, and compliance professionals trying to make good decisions inside real organizational constraints.</p>
-            <p class="project-why">The podcast solves the problem of abstract security advice by focusing on practical conversations people can apply.</p>
-            <div class="design-note">
-              <p class="design-note-label">Design Note</p>
-              <h4 class="design-note-title">Design security around enablement, not gatekeeping.</h4>
-              <p>Too much of the industry treats governance, risk, and compliance as a function that slows the business down. Controls become checklists. Engineers receive requirements without context. Security teams become known for saying "no."</p>
-              <p>I wanted to challenge that mindset.</p>
-              <p>A good GRC practitioner shouldn't be translating control language into tickets and throwing them over a wall. They should understand the intent behind the control, work with engineers to design practical implementations, and help make the secure path the easiest path.</p>
-              <p>The best controls are often the ones users barely notice.</p>
-              <p>The same philosophy applied to the podcast itself.</p>
-              <p>Many GRC conversations sound insightful in the moment but remain entirely theoretical. Listeners walk away understanding a concept without knowing how to apply it.</p>
-              <p>The goal was to focus on implementation instead:</p>
-              <ul>
-                <li>What was the original manual process?</li>
-                <li>What made it painful?</li>
-                <li>What was automated first?</li>
-                <li>How did the process evolve over time?</li>
-                <li>How were engineering relationships improved?</li>
-                <li>What specific actions could someone take tomorrow?</li>
-              </ul>
-              <p>Every episode aimed to leave listeners with something practical they could implement immediately, not just another framework to memorize.</p>
-              <p>The goal wasn't to teach people how compliance works. The goal was to show how good GRC can remove burden from both the business and the engineers building it.</p>
-            </div>
-            <span class="project-link">Listen on Spotify <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-
-      </div>
     </section>
 
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-left">
           <p>Mark Graziano</p>
-          <p class="footer-sub">Developer &amp; Maker</p>
+          <p class="footer-sub">Product-Minded Engineer</p>
         </div>
         <div class="footer-right">
           <a href="https://github.com/blueskynoise" target="_blank" rel="noopener">GitHub</a>
