@@ -202,6 +202,30 @@ body {
   margin-top: 8px;
 }
 
+.pullquote {
+  border-left: 3px solid var(--accent);
+  margin: 28px 0 0;
+  max-width: 760px;
+  padding-left: 28px;
+}
+
+.pullquote p {
+  color: var(--text);
+  font-size: clamp(30px, 4.4vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+}
+
+.pullquote cite {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-style: normal;
+  color: var(--text-subtle);
+}
+
 .section-intro {
   font-size: 17px;
   color: var(--text-muted);
@@ -475,30 +499,6 @@ body {
   margin-bottom: 20px;
 }
 
-.ai-quote {
-  border-left: 3px solid var(--accent);
-  margin: 0 0 32px;
-  max-width: 760px;
-  padding-left: 28px;
-}
-
-.ai-quote p {
-  color: var(--text);
-  font-size: clamp(30px, 4.4vw, 44px);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.18;
-}
-
-.ai-quote cite {
-  display: block;
-  margin-top: 14px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-style: normal;
-  color: var(--text-subtle);
-}
-
 .ai-intro {
   color: var(--text-muted);
   font-size: 18px;
@@ -647,11 +647,11 @@ body {
     font-size: 18px;
   }
 
-  .ai-quote {
+  .pullquote {
     padding-left: 20px;
   }
 
-  .ai-quote p {
+  .pullquote p {
     font-size: 28px;
   }
 
